@@ -37,7 +37,7 @@ export default function FeaturesSection() {
         </div>
         <div className="features-image">
           <Image
-            src="/feature-man-image.png"
+            src="/feature-realistic-man.png"
             alt="Financial technology operations"
             width={600}
             height={700}

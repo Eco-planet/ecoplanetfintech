@@ -11,7 +11,7 @@ export default function HeroSection() {
               <path d="M2 17L12 22L22 17"/>
               <path d="M2 12L12 17L22 12"/>
             </svg>
-            Empowering Financial Innovation
+            Where Ecology Meets Economy
           </div>
           <h1 className="hero-heading">
             <span className="highlight">LENDING.</span>
@@ -43,7 +43,7 @@ export default function HeroSection() {
 
         <div className="hero-image-wrapper">
           <Image
-            src="/hero-image.png"
+            src="/hero-realistic-woman.png"
             alt="Modern fintech and NBFC operations platform"
             width={700}
             height={500}

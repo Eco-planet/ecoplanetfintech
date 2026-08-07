@@ -13,9 +13,9 @@ export default function Footer() {
                 <Image
                   src="/Logo.png"
                   alt="EcoPlanet Fintech Pvt Ltd"
-                  width={180}
-                  height={60}
-                  style={{ height: "45px", width: "auto", objectFit: "contain" }}
+                  width={280}
+                  height={95}
+                  style={{ height: "90px", width: "auto", objectFit: "contain" }}
                 />
               </div>
             </div>
