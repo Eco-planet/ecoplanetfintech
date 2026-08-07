@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-function AnimatedCounter({ target, suffix = "" }: { target: number; suffix: string }) {
+function AnimatedCounter({ target, suffix = "", prefix = "" }: { target: number; suffix: string; prefix?: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
@@ -34,18 +34,20 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix: stri
     return () => observer.disconnect();
   }, [target]);
 
+  const formattedCount = prefix ? `${prefix}${count}` : count;
+
   return (
     <div ref={ref} className="stat-number">
-      {count}{suffix}
+      {formattedCount}{suffix}
     </div>
   );
 }
 
 export default function StatsSection() {
   const stats = [
-    { number: 3, suffix: "+", label: "NBFCs Optimized Across India" },
-    { number: 98, suffix: "%", label: "Process Automation Rate" },
-    { number: 50, suffix: "%", label: "Faster Loan Disbursal Turnaround" },
+    { number: 3, suffix: "+", prefix: "0", label: "NBFCs Optimized Across India" },
+    { number: 98, suffix: "%", prefix: "", label: "Process Automation Rate" },
+    { number: 50, suffix: "%", prefix: "", label: "Faster Loan Disbursal Turnaround" },
   ];
 
   return (
@@ -62,7 +64,7 @@ export default function StatsSection() {
         <div className="stats-grid">
           {stats.map((stat, i) => (
             <div key={i} className="stat-item">
-              <AnimatedCounter target={stat.number} suffix={stat.suffix} />
+              <AnimatedCounter target={stat.number} suffix={stat.suffix} prefix={stat.prefix} />
               <div className="stat-label">{stat.label}</div>
             </div>
           ))}
