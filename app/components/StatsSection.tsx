@@ -43,7 +43,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix: stri
 
 export default function StatsSection() {
   const stats = [
-    { number: 30, suffix: "+", label: "NBFCs Optimized Across India" },
+    { number: 3, suffix: "+", label: "NBFCs Optimized Across India" },
     { number: 98, suffix: "%", label: "Process Automation Rate" },
     { number: 50, suffix: "%", label: "Faster Loan Disbursal Turnaround" },
   ];

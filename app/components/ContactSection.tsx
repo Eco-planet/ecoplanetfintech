@@ -18,7 +18,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <div className="contact-info-label">Email:</div>
-                <div className="contact-info-value">info@ecoplanet.in</div>
+                <div className="contact-info-value">support@ecoplanetfintech.com</div>
               </div>
             </div>
             <div className="contact-info-item">
@@ -29,7 +29,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <div className="contact-info-label">Phone:</div>
-                <div className="contact-info-value">+91 98765 43210</div>
+                <div className="contact-info-value">+91 9310260636</div>
               </div>
             </div>
             <div className="contact-info-item">
@@ -41,7 +41,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <div className="contact-info-label">Address:</div>
-                <div className="contact-info-value">New Delhi, India</div>
+                <div className="contact-info-value">Plot No.15/2, Situated at Main Najafgarh Road, Rama Road, New Delhi- 110015</div>
               </div>
             </div>
           </div>
