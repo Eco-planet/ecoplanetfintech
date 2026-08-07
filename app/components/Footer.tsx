@@ -79,26 +79,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Disclaimer Box */}
-        <div className="footer-disclaimer-box">
-          <div className="disclaimer-header">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-            <span>Regulatory & Legal Disclaimer</span>
-          </div>
-          <p className="footer-disclaimer">
-            EcoPlanet is a financial operations service provider and does not 
-            directly offer loans, credit facilities, or financial investment advice. 
-            All operational, compliance, and technology solutions are designed to support 
-            NBFCs and registered financial institutions. EcoPlanet is not a registered 
-            NBFC or bank under RBI regulations. All trademarks and logos used are the 
-            property of their respective owners. The information provided on this website 
-            is for informational purposes only and should not be considered legal or 
-            financial advice. For regulatory guidance or financial decisions, please 
-            consult certified professionals or official financial advisors. Use of this 
-            website implies your acceptance of our terms, privacy policy, and conditions.
-          </p>
-        </div>
-
         {/* Bottom copyright bar */}
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} EcoPlanet Fintech Pvt Ltd. All rights reserved.</p>
