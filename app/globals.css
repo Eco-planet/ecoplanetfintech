@@ -190,12 +190,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 110px;
+  height: 125px;
   transition: height 0.3s ease;
 }
 
 .navbar.scrolled .nav-container {
-  height: 85px;
+  height: 95px;
 }
 
 .nav-logo {
@@ -1497,10 +1497,11 @@ body {
 
 .footer-logo-box {
   display: inline-block;
-  background: white;
-  padding: 10px 20px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  padding: 12px 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .footer-tagline-text {
@@ -1795,12 +1796,12 @@ body {
 /* ===== INNER PAGES (About, Services, Why Us, Contact) ===== */
 
 .inner-page {
-  padding-top: 110px;
+  padding-top: 130px;
   min-height: 100vh;
 }
 
 .inner-page--no-pad {
-  padding-top: 110px;
+  padding-top: 130px;
 }
 
 /* Inner Hero */

@@ -40,14 +40,15 @@ export default function Navbar() {
           <Image
             src="/Logo.png"
             alt="EcoPlanet Fintech Pvt Ltd"
-            width={280}
-            height={95}
+            width={320}
+            height={110}
             priority
             style={{
-              height: scrolled ? "72px" : "90px",
+              height: scrolled ? "82px" : "105px",
               width: "auto",
               objectFit: "contain",
-              transition: "height 0.3s ease"
+              transition: "height 0.3s ease",
+              filter: "drop-shadow(0 2px 12px rgba(6, 78, 59, 0.18)) contrast(1.08) brightness(1.02)",
             }}
           />
         </Link>
