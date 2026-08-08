@@ -190,12 +190,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 125px;
+  height: 110px;
   transition: height 0.3s ease;
 }
 
 .navbar.scrolled .nav-container {
-  height: 95px;
+  height: 85px;
 }
 
 .nav-logo {
@@ -1796,12 +1796,12 @@ body {
 /* ===== INNER PAGES (About, Services, Why Us, Contact) ===== */
 
 .inner-page {
-  padding-top: 130px;
+  padding-top: 110px;
   min-height: 100vh;
 }
 
 .inner-page--no-pad {
-  padding-top: 130px;
+  padding-top: 110px;
 }
 
 /* Inner Hero */
