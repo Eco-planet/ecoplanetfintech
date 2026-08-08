@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -39,11 +40,11 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#why-us">Why Choose Us</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/services">Our Services</Link></li>
+              <li><Link href="/why-us">Why Choose Us</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -51,11 +52,11 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Our Solutions</h4>
             <ul className="footer-links">
-              <li><a href="#services">Lending-as-a-Service (LaaS)</a></li>
-              <li><a href="#services">Short-Term Yield Program (STYP)</a></li>
-              <li><a href="#services">Capital-In-Lending Program (CLP)</a></li>
-              <li><a href="#services">Compliance & RBI Automation</a></li>
-              <li><a href="#services">Loan Management System</a></li>
+              <li><Link href="/services">Lending-as-a-Service (LaaS)</Link></li>
+              <li><Link href="/services">Short-Term Yield Program (STYP)</Link></li>
+              <li><Link href="/services">Capital-In-Lending Program (CLP)</Link></li>
+              <li><Link href="/services">Compliance & RBI Automation</Link></li>
+              <li><Link href="/services">Loan Management System</Link></li>
             </ul>
           </div>
 

@@ -2,10 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,26 +20,23 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About Us" },
-    { href: "#services", label: "Our Services" },
-    { href: "#why-us", label: "Why Choose Us" },
-    { href: "#contact", label: "Contact Us" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Our Services" },
+    { href: "/why-us", label: "Why Choose Us" },
+    { href: "/contact", label: "Contact Us" },
   ];
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const el = document.querySelector(href);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      setMobileOpen(false);
-    }
+  const isActive = (href: string) => {
+    if (href === "/" && pathname === "/") return true;
+    if (href !== "/" && pathname.startsWith(href)) return true;
+    return false;
   };
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`} id="navbar">
       <div className="nav-container">
-        <a href="#home" className="nav-logo" onClick={(e) => handleClick(e, "#home")}>
+        <Link href="/" className="nav-logo">
           <Image
             src="/Logo.png"
             alt="EcoPlanet Fintech Pvt Ltd"
@@ -49,14 +50,18 @@ export default function Navbar() {
               transition: "height 0.3s ease"
             }}
           />
-        </a>
+        </Link>
 
         <ul className="nav-links">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} onClick={(e) => handleClick(e, link.href)}>
+              <Link
+                href={link.href}
+                className={isActive(link.href) ? "active" : ""}
+                onClick={() => setMobileOpen(false)}
+              >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -74,9 +79,14 @@ export default function Navbar() {
 
       <div className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
         {links.map((link) => (
-          <a key={link.href} href={link.href} onClick={(e) => handleClick(e, link.href)}>
+          <Link
+            key={link.href}
+            href={link.href}
+            className={isActive(link.href) ? "active" : ""}
+            onClick={() => setMobileOpen(false)}
+          >
             {link.label}
-          </a>
+          </Link>
         ))}
       </div>
     </nav>
