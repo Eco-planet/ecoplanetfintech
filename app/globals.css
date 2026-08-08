@@ -1498,10 +1498,9 @@ body {
 .footer-logo-box {
   display: inline-block;
   background: #ffffff;
-  padding: 12px 24px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 8px 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .footer-tagline-text {
