@@ -1,7 +1,30 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsModalOpen(false);
+      }
+    };
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen]);
+
   return (
     <footer className="footer-mystic">
       <div className="footer-container">
@@ -9,24 +32,59 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand Info */}
           <div className="footer-brand-col">
-            <div className="footer-logo-wrapper">
-              <div className="footer-logo-box">
-                <Image
-                  src="/Logo.png"
-                  alt="EcoPlanet Fintech Pvt Ltd"
-                  width={280}
-                  height={90}
-                  style={{
-                    height: "80px",
-                    width: "auto",
-                    objectFit: "contain",
-                  }}
-                />
+            {/* Top Row: Logo Box & Certificate Card (Equal Top Level Start) */}
+            <div className="footer-brand-top-row">
+              <div className="footer-logo-wrapper">
+                <div className="footer-logo-box">
+                  <Image
+                    src="/Logo.png"
+                    alt="EcoPlanet Fintech Pvt Ltd"
+                    width={280}
+                    height={90}
+                    style={{
+                      height: "75px",
+                      width: "auto",
+                      objectFit: "contain",
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* ISO Certificate Card (Side-by-Side with Logo, Equal Level Start) */}
+              <div className="footer-cert-top-side">
+                <div
+                  className="footer-cert-doc-card"
+                  onClick={() => setIsModalOpen(true)}
+                  title="Click to view ISO 9001:2015 Certificate"
+                >
+                  <Image
+                    src="/iso-certificate-thumb.png"
+                    alt="ISO 9001:2015 Certificate of Registration - EcoPlanet Fintech Private Limited"
+                    width={135}
+                    height={190}
+                    className="footer-cert-doc-img"
+                  />
+                  <div className="footer-cert-doc-overlay">
+                    <div className="footer-cert-zoom-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      <span>View</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Tagline Text (Below Logo & Certificate) */}
             <p className="footer-tagline-text">
               Precision lending infrastructure and compliance automation purpose-built for modern financial institutions.
             </p>
+
+            {/* Social Icons (Below Tagline) */}
             <div className="footer-socials">
               <a href="#" aria-label="LinkedIn" className="social-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
@@ -92,10 +150,64 @@ export default function Footer() {
             <span>•</span>
             <a href="#">Terms of Service</a>
             <span>•</span>
+            <button className="footer-cert-text-link" onClick={() => setIsModalOpen(true)}>
+              ISO Certificate
+            </button>
+            <span>•</span>
             <a href="#">Security</a>
           </div>
         </div>
       </div>
+
+      {/* Full-Screen Certificate Modal Lightbox */}
+      {isModalOpen && (
+        <div className="cert-modal-backdrop" onClick={() => setIsModalOpen(false)}>
+          <div className="cert-modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="cert-modal-header">
+              <div className="cert-modal-title">
+                <span className="cert-modal-badge">ISO 9001:2015 Quality Management System</span>
+                <h3>Certificate of Registration — EcoPlanet Fintech Pvt Ltd</h3>
+              </div>
+              <div className="cert-modal-actions">
+                <a
+                  href="/iso-certificate.png"
+                  download="EcoPlanet-ISO-9001-2015-Certificate.png"
+                  className="cert-modal-download-btn"
+                  title="Download Certificate"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Download</span>
+                </a>
+                <button
+                  className="cert-modal-close-btn"
+                  onClick={() => setIsModalOpen(false)}
+                  aria-label="Close Certificate Preview"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="cert-modal-body">
+              <Image
+                src="/iso-certificate.png"
+                alt="ISO 9001:2015 Certificate of Registration - EcoPlanet Fintech Private Limited"
+                width={1200}
+                height={1700}
+                className="cert-modal-img"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </footer>
   );
 }
+
