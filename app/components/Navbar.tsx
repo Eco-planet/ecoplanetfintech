@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="nav-container">
         <Link href="/" className="nav-logo">
           <Image
-            src="/Logo.png"
+            src="/logo.png"
             alt="EcoPlanet Fintech Pvt Ltd"
             width={280}
             height={90}

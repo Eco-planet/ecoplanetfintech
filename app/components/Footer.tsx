@@ -37,7 +37,7 @@ export default function Footer() {
               <div className="footer-logo-wrapper">
                 <div className="footer-logo-box">
                   <Image
-                    src="/Logo.png"
+                    src="/logo.png"
                     alt="EcoPlanet Fintech Pvt Ltd"
                     width={280}
                     height={90}
