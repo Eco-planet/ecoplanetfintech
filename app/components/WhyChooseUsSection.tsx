@@ -1,32 +1,42 @@
 export default function WhyChooseUsSection() {
   const reasons = [
     {
-      title: "Scalable Technology",
+      title: "Technology Enabled",
       description:
-        "Extensive industry knowledge ensuring unmatched quality and reliability. Our platform scales seamlessly as your lending portfolio grows.",
+        "Digital-first processes designed for speed, transparency and scalability.",
     },
     {
-      title: "Cutting-Edge Technology",
+      title: "Financial Services Expertise",
       description:
-        "Leveraging advanced technologies to empower your financial institution — from AI-driven credit scoring to real-time loan tracking dashboards.",
+        "Understanding of lending, credit, distribution and financial operations.",
     },
     {
-      title: "RBI Compliance Ready",
+      title: "Partnership Driven",
       description:
-        "Our deep understanding of RBI regulations ensures you stay compliant with all regulatory requirements, avoiding penalties and reputational risks.",
+        "Long-term relationships with financial institutions and fintech businesses.",
     },
     {
-      title: "Customer-First Approach",
+      title: "Execution Focused",
       description:
-        "We prioritize your unique business goals, providing tailored solutions and dedicated support to ensure your fintech operations succeed.",
+        "We focus not only on strategy but also on implementation.",
+    },
+    {
+      title: "Scalable Models",
+      description:
+        "Processes designed to support growth without compromising operational discipline.",
     },
   ];
 
   return (
     <section className="why-section" id="why-us">
       <div className="why-container">
-        <h2 className="why-heading">WHY CHOOSE ECOPLANET?</h2>
-        <div className="why-grid">
+        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+          <span className="inner-badge">Why EcoPlanet</span>
+          <h2 className="why-heading" style={{ marginTop: "0.5rem" }}>
+            Built for the Next Generation of Financial Services
+          </h2>
+        </div>
+        <div className="why-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
           {reasons.map((reason, i) => (
             <div key={i} className="why-card">
               <h3>{reason.title}</h3>

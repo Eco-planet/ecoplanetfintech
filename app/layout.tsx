@@ -15,10 +15,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "EcoPlanet — Empowering Financial Futures with Precision, Compliance, and Innovation",
+  title: "EcoPlanet Fintech Pvt. Ltd. — Where Ecology Meets Economy",
   description:
-    "EcoPlanet simplifies growth for fintechs and NBFCs through automation, compliance, and secure operations — purpose-built for modern lending institutions.",
-  keywords: "fintech, NBFC, lending, financial operations, compliance, automation, loan management",
+    "EcoPlanet Fintech Pvt. Ltd. is a technology-enabled financial services company providing Lending Service Provider (LSP), fintech partnership, financial advisory and lending support solutions to financial institutions and businesses.",
+  keywords:
+    "EcoPlanet Fintech, Lending Service Provider, LSP, digital lending, NBFC partnerships, financial advisory, fintech partnerships, lending support, India",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

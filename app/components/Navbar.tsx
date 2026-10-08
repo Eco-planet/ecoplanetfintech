@@ -22,8 +22,13 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/services", label: "Our Services" },
-    { href: "/why-us", label: "Why Choose Us" },
+    { href: "/services", label: "Our Solutions" },
+    { href: "/lsp-services", label: "LSP Services" },
+    { href: "/ecosystem", label: "Ecosystem" },
+    { href: "/why-us", label: "Why EcoPlanet" },
+    { href: "/leadership", label: "Leadership" },
+    { href: "/insights", label: "Insights" },
+    { href: "/careers", label: "Careers" },
     { href: "/contact", label: "Contact Us" },
   ];
 

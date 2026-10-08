@@ -81,7 +81,7 @@ export default function Footer() {
 
             {/* Tagline Text (Below Logo & Certificate) */}
             <p className="footer-tagline-text">
-              Precision lending infrastructure and compliance automation purpose-built for modern financial institutions.
+              Where Ecology Meets Economy — Powering the Future of Digital Lending through technology, partnerships, distribution, and growth.
             </p>
 
             {/* Social Icons (Below Tagline) */}
@@ -104,8 +104,11 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/services">Our Services</Link></li>
+              <li><Link href="/leadership">Leadership</Link></li>
+              <li><Link href="/ecosystem">Our Ecosystem</Link></li>
               <li><Link href="/why-us">Why Choose Us</Link></li>
+              <li><Link href="/insights">Insights</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
@@ -114,11 +117,13 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Our Solutions</h4>
             <ul className="footer-links">
-              <li><Link href="/services">Lending-as-a-Service (LaaS)</Link></li>
-              <li><Link href="/services">Short-Term Yield Program (STYP)</Link></li>
-              <li><Link href="/services">Capital-In-Lending Program (CLP)</Link></li>
-              <li><Link href="/services">Compliance & RBI Automation</Link></li>
-              <li><Link href="/services">Loan Management System</Link></li>
+              <li><Link href="/services">Integrated Solutions</Link></li>
+              <li><Link href="/lsp-services">LSP Services</Link></li>
+              <li><Link href="/financial-advisory">Financial Advisory</Link></li>
+              <li><Link href="/fintech-partnerships">Fintech Partnerships</Link></li>
+              <li><Link href="/lending-partnerships">Lending & Distribution</Link></li>
+              <li><Link href="/digital-lending">Digital Lending Support</Link></li>
+              <li><Link href="/for-nbfcs">For NBFCs & Institutions</Link></li>
             </ul>
           </div>
 
@@ -128,15 +133,19 @@ export default function Footer() {
             <ul className="footer-contact-list">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.9965 12 12.9965C11.6357 12.9965 11.2787 12.8934 10.97 12.7L2 7" /></svg>
-                <span>support@ecoplanetfintech.com</span>
+                <a href="mailto:info@ecoplanetfintech.com" style={{ color: "inherit", textDecoration: "none" }}>info@ecoplanetfintech.com</a>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                <span>+91 9310260636</span>
+                <a href="tel:+919310885673" style={{ color: "inherit", textDecoration: "none" }}>+91 93108 85673</a>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                <span>Plot No.15/2, Situated at Main Najafgarh Road, Rama Road, New Delhi- 110015</span>
+                <span>Plot No. 15/2, Najafgarh Main Road, 2nd Floor, Rama Road, Moti Nagar Industrial Area, New Delhi – 110015</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <a href="https://www.ecoplanetfintech.com" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>www.ecoplanetfintech.com</a>
               </li>
             </ul>
           </div>
@@ -144,17 +153,17 @@ export default function Footer() {
 
         {/* Bottom copyright bar */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} EcoPlanet Fintech Pvt Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} EcoPlanet Fintech Pvt. Ltd. All rights reserved.</p>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
+            <Link href="/faq">FAQ</Link>
             <span>•</span>
-            <a href="#">Terms of Service</a>
+            <Link href="/faq#privacy-policy">Privacy Policy</Link>
+            <span>•</span>
+            <Link href="/faq#regulatory-disclaimer">Regulatory Disclaimer</Link>
             <span>•</span>
             <button className="footer-cert-text-link" onClick={() => setIsModalOpen(true)}>
               ISO Certificate
             </button>
-            <span>•</span>
-            <a href="#">Security</a>
           </div>
         </div>
       </div>

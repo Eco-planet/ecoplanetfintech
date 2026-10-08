@@ -1,139 +1,162 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
-  title: "Why Choose Us | EcoPlanet Fintech Pvt Ltd",
-  description: "Discover why leading NBFCs and fintech companies trust EcoPlanet — from RBI compliance readiness to cutting-edge technology and customer-first support.",
+  title: "Why EcoPlanet | EcoPlanet Fintech Pvt. Ltd.",
+  description:
+    "Why Partner With EcoPlanet? Financial services understanding, technology-enabled execution, partnership mindset, operational discipline, and compliance consciousness.",
 };
 
-const reasons = [
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/>
-      </svg>
-    ),
-    title: "Scalable Technology",
-    description: "Our platform scales seamlessly as your lending portfolio grows — from startup NBFCs to large multi-branch operations managing thousands of loans daily.",
-    stat: "10x",
-    statLabel: "Faster Loan Processing",
-  },
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-      </svg>
-    ),
-    title: "Cutting-Edge Technology",
-    description: "Leveraging AI-driven credit scoring, real-time loan tracking dashboards, and automated workflows to empower every level of your financial institution.",
-    stat: "AI-First",
-    statLabel: "Credit Intelligence",
-  },
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        <path d="M9 12L11 14L15 10"/>
-      </svg>
-    ),
-    title: "RBI Compliance Ready",
-    description: "Our deep understanding of RBI regulations ensures you stay compliant at all times — automated reporting, KYC/AML workflows, and real-time regulatory updates built-in.",
-    stat: "100%",
-    statLabel: "RBI Compliant Stack",
-  },
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>
-    ),
-    title: "Customer-First Approach",
-    description: "We prioritize your unique business goals, providing tailored solutions, dedicated account management, and 24/7 support to ensure your fintech operations succeed.",
-    stat: "03+",
-    statLabel: "NBFCs Optimized",
-  },
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-      </svg>
-    ),
-    title: "Deep Domain Expertise",
-    description: "Years of hands-on NBFC industry experience means we understand your pain points — regulatory pressure, loan quality, borrower management — before you even explain them.",
-    stat: "5+",
-    statLabel: "Years of Experience",
-  },
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-        <line x1="1" y1="10" x2="23" y2="10"/>
-      </svg>
-    ),
-    title: "Transparent Pricing",
-    description: "No hidden fees, no surprise charges. Our pricing is straightforward — you know exactly what you pay for and what value you get in return.",
-    stat: "Zero",
-    statLabel: "Hidden Charges",
-  },
-];
-
 export default function WhyUsPage() {
+  const pillars = [
+    {
+      title: "Financial Services Understanding",
+      desc: "We understand lending, distribution, credit processes and financial operations.",
+      icon: (
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+          <line x1="12" y1="6" x2="12" y2="8"/>
+          <line x1="12" y1="16" x2="12" y2="18"/>
+        </svg>
+      ),
+    },
+    {
+      title: "Technology-Enabled Execution",
+      desc: "We use technology to improve processes, visibility and scalability.",
+      icon: (
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <polyline points="16 18 22 12 16 6"/>
+          <polyline points="8 6 2 12 8 18"/>
+        </svg>
+      ),
+    },
+    {
+      title: "Partnership Mindset",
+      desc: "We focus on long-term relationships rather than short-term transactions.",
+      icon: (
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      ),
+    },
+    {
+      title: "Operational Discipline",
+      desc: "Structured processes help maintain consistency and accountability.",
+      icon: (
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      ),
+    },
+    {
+      title: "Customer-Centric Approach",
+      desc: "We believe technology should simplify the customer experience.",
+      icon: (
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+          <line x1="9" y1="9" x2="9.01" y2="9"/>
+          <line x1="15" y1="9" x2="15.01" y2="9"/>
+        </svg>
+      ),
+    },
+    {
+      title: "Scalable Infrastructure",
+      desc: "Our operating approach is designed to support growth.",
+      icon: (
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+          <line x1="6" y1="6" x2="6.01" y2="6"/>
+          <line x1="6" y1="18" x2="6.01" y2="18"/>
+        </svg>
+      ),
+    },
+    {
+      title: "Compliance Consciousness",
+      desc: "We recognise that responsible financial services require strong regulatory and process discipline.",
+      icon: (
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+      ),
+    },
+  ];
+
   return (
     <>
       <Navbar />
       <main className="inner-page">
-        {/* Hero */}
+        {/* HERO */}
         <section className="inner-hero inner-hero--center">
-          <span className="inner-badge">Why Choose Us</span>
-          <h1>The <span className="inner-highlight">EcoPlanet Advantage</span></h1>
+          <span className="inner-badge">Why EcoPlanet</span>
+          <h1>
+            Why Partner With <span className="inner-highlight">EcoPlanet?</span>
+          </h1>
           <p className="inner-hero-p">
-            Built by fintech veterans, designed for Indian NBFCs — here&apos;s why leading financial institutions trust EcoPlanet to power their operations.
+            Built for the next generation of financial services, connecting domain understanding with disciplined technology-enabled execution.
           </p>
         </section>
 
-        {/* Reasons Grid */}
+        {/* 7 PILLARS GRID */}
         <section className="why-page-section">
-          <div className="why-page-grid">
-            {reasons.map((r, i) => (
-              <div key={i} className="why-page-card">
-                <div className="why-card-top">
-                  <div className="why-page-icon">{r.icon}</div>
-                  <div className="why-stat-box">
-                    <span className="why-stat">{r.stat}</span>
-                    <span className="why-stat-label">{r.statLabel}</span>
-                  </div>
+          <div className="why-page-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
+            {pillars.map((p, i) => (
+              <div key={i} className="why-page-card" style={{ padding: "2.2rem" }}>
+                <div className="why-page-icon" style={{ marginBottom: "1.2rem" }}>
+                  {p.icon}
                 </div>
-                <h3>{r.title}</h3>
-                <p>{r.description}</p>
+                <h3 style={{ fontSize: "1.15rem", marginBottom: "0.6rem" }}>{p.title}</h3>
+                <p style={{ fontSize: "0.92rem", lineHeight: 1.65, color: "#64748b" }}>{p.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Proof / Image + Quote */}
-        <section className="why-proof-section">
-          <div className="why-proof-content">
-            <div className="why-proof-image">
-              <Image
-                src="/feature-realistic-man.png"
-                alt="EcoPlanet Fintech Expert"
-                width={440}
-                height={500}
-                style={{ width: "100%", height: "auto", objectFit: "contain" }}
-              />
-            </div>
-            <div className="why-proof-text">
-              <blockquote>
-                &ldquo;EcoPlanet helped us go from manual loan processing to a fully automated NBFC operation in under 3 months — compliance, collections, and all.&rdquo;
-              </blockquote>
-              <p className="why-proof-author">— NBFC Partner, New Delhi</p>
-              <a href="/contact" className="inner-cta-btn">Start Your Journey</a>
-            </div>
+        {/* OUR DIFFERENCE */}
+        <section style={{ padding: "4rem 2rem 5rem", maxWidth: "1000px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "linear-gradient(135deg, var(--green-800), var(--green-950))",
+              color: "white",
+              borderRadius: "24px",
+              padding: "4rem 2.5rem",
+              textAlign: "center",
+              boxShadow: "0 15px 50px rgba(6, 78, 59, 0.2)"
+            }}
+          >
+            <span
+              style={{
+                fontSize: "0.78rem",
+                fontWeight: 700,
+                letterSpacing: "1.5px",
+                textTransform: "uppercase",
+                color: "var(--lime-400)",
+                display: "inline-block",
+                marginBottom: "0.8rem"
+              }}
+            >
+              Our Difference
+            </span>
+            <h2 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "clamp(1.7rem, 3.2vw, 2.4rem)", fontWeight: 800, marginBottom: "1.2rem", lineHeight: 1.3 }}>
+              We Don&apos;t Just Connect Businesses. <br />
+              <span style={{ color: "var(--lime-400)" }}>We Help Them Execute.</span>
+            </h2>
+            <p style={{ fontSize: "1.15rem", lineHeight: 1.8, color: "rgba(255, 255, 255, 0.9)", maxWidth: "750px", margin: "0 auto 2.5rem" }}>
+              Our objective is to convert partnerships into measurable operating capabilities and sustainable business outcomes.
+            </p>
+            <Link href="/contact" className="inner-cta-btn" style={{ background: "white", color: "var(--green-900)" }}>
+              Talk to EcoPlanet
+            </Link>
           </div>
         </section>
       </main>
