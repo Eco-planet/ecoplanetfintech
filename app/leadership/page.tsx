@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Leadership | EcoPlanet Fintech Pvt. Ltd.",
   description:
-    "Leadership With Purpose. Kusshal Madhogaria, Founder Director & CEO of EcoPlanet Fintech Pvt. Ltd.",
+    "Leadership With Purpose. Kusshal Madhogaria, Founder cum Chairman of EcoPlanet Fintech Pvt. Ltd.",
 };
 
 export default function LeadershipPage() {

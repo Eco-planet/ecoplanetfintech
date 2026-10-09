@@ -22,53 +22,52 @@ export default function LeadershipSection() {
         </div>
 
         {/* Founder Card */}
-        <div
-          style={{
-            background: "white",
-            borderRadius: "24px",
-            padding: "3.5rem 3rem",
-            boxShadow: "0 15px 50px rgba(0, 0, 0, 0.06)",
-            border: "1px solid rgba(16, 185, 129, 0.2)",
-            display: "grid",
-            gridTemplateColumns: "240px 1fr",
-            gap: "3rem",
-            alignItems: "center"
-          }}
-        >
+        <div className="leadership-founder-card">
           <div style={{ textAlign: "center" }}>
             <div
               style={{
-                width: "180px",
-                height: "180px",
-                borderRadius: "24px",
+                width: "210px",
+                height: "250px",
+                borderRadius: "22px",
                 overflow: "hidden",
                 margin: "0 auto 1.5rem",
-                boxShadow: "0 10px 30px rgba(6, 78, 59, 0.15)",
-                border: "3px solid var(--green-500)"
+                boxShadow: "0 12px 32px rgba(6, 78, 59, 0.18)",
+                border: "3px solid var(--green-500)",
+                position: "relative"
               }}
             >
               <Image
-                src="/team-member.png"
+                src="/kusshal-madhogaria.png"
                 alt="Kusshal Madhogaria"
-                width={180}
-                height={180}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                width={260}
+                height={310}
+                priority
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 12%" }}
               />
             </div>
-            <h3 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "1.3rem", fontWeight: 800, color: "var(--green-950)" }}>
+            <h3 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "1.35rem", fontWeight: 800, color: "var(--green-950)", marginBottom: "0.35rem" }}>
               Kusshal Madhogaria
             </h3>
-            <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--green-600)", marginTop: "0.25rem" }}>
-              Founder Director & CEO
+            <div style={{ fontSize: "1.05rem", fontWeight: 800, color: "var(--green-600)", marginBottom: "0.6rem", letterSpacing: "0.3px" }}>
+              Founder cum Chairman
+            </div>
+            <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "#64748b", lineHeight: 1.45, padding: "0 0.5rem" }}>
+              Entrepreneur | Banking, Fintech &amp; Lending Professional
             </div>
           </div>
 
           <div>
-            <p style={{ fontSize: "1.08rem", color: "#334155", lineHeight: 1.8, marginBottom: "1.2rem" }}>
-              Kusshal Madhogaria brings extensive experience across financial services, lending, business development, distribution, operations and strategic growth.
+            <p style={{ fontSize: "1.05rem", color: "#334155", lineHeight: 1.85, marginBottom: "1.2rem" }}>
+              Kusshal Madhogaria is an entrepreneur with a background in banking, lending, and financial services. Through his work with EcoPlanet Fintech and FinMudra Credit, he focuses on building technology-enabled businesses that make the lending journey simpler, more transparent, and responsive to customer needs.
             </p>
-            <p style={{ fontSize: "1.05rem", color: "#475569", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              His vision for EcoPlanet is to create a technology-enabled financial-services organisation that combines:
+            <p style={{ fontSize: "1.05rem", color: "#334155", lineHeight: 1.85, marginBottom: "1.2rem" }}>
+              His professional experience spans secured and unsecured lending, business development, lending partnerships, and team leadership. He brings a practical understanding of business growth and day-to-day operations, with an emphasis on disciplined credit processes, service quality, and responsible business practices.
+            </p>
+            <p style={{ fontSize: "1.05rem", color: "#334155", lineHeight: 1.85, marginBottom: "1.2rem" }}>
+              Kusshal&apos;s leadership approach centres on ownership, accountability, and collaboration. He believes that strong financial services businesses are built by capable teams, supported by clear processes and lasting relationships with customers and partners.
+            </p>
+            <p style={{ fontSize: "1.05rem", color: "#334155", lineHeight: 1.85, marginBottom: "1.6rem" }}>
+              His vision is to combine technology with a human understanding of financial needs—creating sustainable businesses that earn trust and deliver long-term value.
             </p>
 
             {/* Formula Pill */}
@@ -78,14 +77,13 @@ export default function LeadershipSection() {
                 flexWrap: "wrap",
                 alignItems: "center",
                 gap: "0.6rem",
-                padding: "0.8rem 1.4rem",
+                padding: "0.75rem 1.4rem",
                 background: "rgba(16, 185, 129, 0.08)",
                 borderRadius: "50px",
                 fontFamily: "Montserrat, sans-serif",
-                fontSize: "0.95rem",
+                fontSize: "0.92rem",
                 fontWeight: 700,
-                color: "var(--green-900)",
-                marginBottom: "1.5rem"
+                color: "var(--green-900)"
               }}
             >
               <span>Financial Expertise</span>
@@ -96,10 +94,6 @@ export default function LeadershipSection() {
               <span style={{ color: "var(--lime-500)" }}>+</span>
               <span>Execution</span>
             </div>
-
-            <p style={{ fontSize: "1rem", color: "#475569", lineHeight: 1.8 }}>
-              Under his leadership, EcoPlanet aims to build long-term relationships with financial institutions, fintech companies and businesses while creating responsible and scalable financial-service solutions.
-            </p>
           </div>
         </div>
 
