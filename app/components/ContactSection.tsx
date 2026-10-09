@@ -132,7 +132,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <strong>Email:</strong>{" "}
-                <a href="mailto:info@ecoplanetfintech.com" style={{ color: "var(--green-700)", textDecoration: "none" }}>info@ecoplanetfintech.com</a>
+                <a href="mailto:info@ecoplanetfintech.net" style={{ color: "var(--green-700)", textDecoration: "none" }}>info@ecoplanetfintech.net</a>
               </div>
               <div>
                 <strong>Website:</strong>{" "}

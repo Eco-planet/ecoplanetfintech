@@ -24,12 +24,12 @@ export default function ContactPage() {
 
           {/* Contact Info Chips */}
           <div className="contact-page-chips">
-            <a href="mailto:info@ecoplanetfintech.com" className="contact-page-chip">
+            <a href="mailto:info@ecoplanetfintech.net" className="contact-page-chip">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
                 <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.9965 12 12.9965C11.6357 12.9965 11.2787 12.8934 10.97 12.7L2 7"/>
               </svg>
-              info@ecoplanetfintech.com
+              info@ecoplanetfintech.net
             </a>
             <a href="tel:+919310885673" className="contact-page-chip">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">

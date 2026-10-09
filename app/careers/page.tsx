@@ -161,10 +161,10 @@ export default function CareersPage() {
                 Grow With EcoPlanet
               </h3>
               <p style={{ color: "#475569", marginBottom: "1.5rem", fontSize: "1rem" }}>
-                Send your resume and cover letter to our recruitment team at <strong style={{ color: "var(--green-700)" }}>info@ecoplanetfintech.com</strong>
+                Send your resume and cover letter to our recruitment team at <strong style={{ color: "var(--green-700)" }}>info@ecoplanetfintech.net</strong>
               </p>
               <a
-                href="mailto:info@ecoplanetfintech.com?subject=Job%20Application%20-%20EcoPlanet%20Fintech"
+                href="mailto:info@ecoplanetfintech.net?subject=Job%20Application%20-%20EcoPlanet%20Fintech"
                 className="inner-cta-btn"
                 style={{ background: "var(--green-700)", color: "white" }}
               >
